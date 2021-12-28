@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service  //컨트롤러에서 가져다 쓸수있도록 알려줌 이거 없으면 이 서비스는 단순 클래스가 되어 스프링이 얘를 어디서 가져다 쓸지 못찾음
+//@Service  //컨트롤러에서 가져다 쓸수있도록 알려줌 이거 없으면 이 서비스는 단순 클래스가 되어 스프링이 얘를 어디서 가져다 쓸지 못찾음
 //이렇게 어노테이션을 쓰는게 컴포넌트 스캔과 자동 의존관계 설정방식임
 public class MemberService {
     //Test생성은 Ctrl+shift+T
@@ -19,7 +19,7 @@ public class MemberService {
     //테스트와 같은 인스턴스를 사용하기 위해 아래와 같이 바꾼다.
     private final MemberRepository memberRepository;
 
-    @Autowired  //이 멤버서비스는 리포지토리가 필요해서 DI해줘서 연결시킴
+    //@Autowired  //이 멤버서비스는 리포지토리가 필요해서 DI해줘서 연결시킴
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
