@@ -1,5 +1,6 @@
 package hello.hellospring.service;
 
+import com.sun.istack.NotNull;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
@@ -31,7 +32,7 @@ class MemberServiceIntegrationTest {
         Long saveID = memberService.join(member);
 
         //then
-        Member findMember =  memberService.findOne(saveID).get();
+        Member findMember = memberService.findOne(saveID).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
     }
 
